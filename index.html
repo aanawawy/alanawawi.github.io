@@ -1,60 +1,49 @@
----
-title: Home
-layout: default
-background: '/img/bg-index.jpg'
----
-
-<!-- Home Intro
-================================================== -->
-{% if page.url == "/" %} 
-<div class="rounded mb-5 hero">
-  <div class="row align-items-center justify-content-between">
-    <div class="col-md-6">
-      <h1 class="font-weight-bold mb-4 serif-font">Let me  teach you how to become successful online</h1>
-      <p class="lead mb-4">My name is Lyam and I'm here to share with you my knowledge and experience of over 10 years of monetizing my blog.</p>
-      <a href="{{site.baseurl}}/about" class="btn btn-dark text-white px-5 btn-lg">About me</a>
-    </div>
-    <div class="col-md-6 text-right pl-0 pl-lg-4">
-      <img class="intro" height="500" src="{{site.baseurl}}/assets/images/intro.svg">      
-    </div>
-  </div>
-</div>
-{% endif %}
-
-<!-- Featured
-================================================== -->
-<section class="row">
-  {% for post in site.posts %}
-      {% if post.featured == true %}
-          <div class="col-md-4 mb-5">
-          {% include postbox.html %}
-          </div>
-      {% endif %}
-  {% endfor %}
-  </div>
-</section>
-
-<!-- Posts List with Sidebar (except featured)
-================================================== -->
-<section class="row">
-  <div class="col-sm-8">
-    <div class="row">
-      {% for post in paginator.posts %}
-      {% unless post.featured == true %}
-      <div class="col-md-6 mb-5">
-        {% include postbox.html %}
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neumorphism Profile Card | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="img-area">
+      <div class="inner-area">
+        <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
       </div>
-      {% endunless %}
-      {% endfor %}
     </div>
-    <!-- Pagination -->
-    <div class="bottompagination">
-      <span class="navigation" role="navigation">
-          {% include pagination.html %}
-      </span>
+    <div class="icon arrow"><i class="fas fa-arrow-left"></i></div>
+    <div class="icon dots"><i class="fas fa-ellipsis-v"></i></div>
+    <div class="name">CodingNepal</div>
+    <div class="about">Designer & Developer</div>
+    <div class="social-icons">
+      <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="buttons">
+      <button>Message</button>
+      <button>Subscribe</button>
+    </div>
+    <div class="social-share">
+      <div class="row">
+        <i class="far fa-heart"></i>
+        <i class="icon-2 fas fa-heart"></i>
+        <span>20.4k</span>
+      </div>
+      <div class="row">
+        <i class="far fa-comment"></i>
+        <i class="icon-2 fas fa-comment"></i>
+        <span>14.3k</span>
+      </div>
+      <div class="row">
+        <i class="fas fa-share"></i>
+        <span>12.8k</span>
+      </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    {% include sidebar.html %}
-  </div>
-</section>
+</body>
+</html>
